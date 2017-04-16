@@ -1,19 +1,11 @@
-// How can we set up the Compliment model to talk to our database?
-// Look at past examples
 
 var mongoose = require('mongoose');
+
 var schema = new mongoose.Schema({
- comps: {type:String, required: true},
- createdAt: {type:Date}
+  comps: { type: String, required: true }
 });
 
-var Compliment = mongoose.model('Compliment', schema);
-
-module.exports = Compliment;
-
+var model = mongoose.model('Compliment', schema);
 
 // Make this available to our other files
-module.exports = Compliment;
-
-
-// var Compliment = null;
+module.exports = model;
